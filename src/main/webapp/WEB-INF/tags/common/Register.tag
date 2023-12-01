@@ -1,6 +1,6 @@
 <%@ tag pageEncoding="UTF-8" language="java" %>
 <style>
-    .login {
+    .register {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -16,7 +16,7 @@
     }
 
     @media (500px < width <= 1024px) {
-        .login {
+        .register {
             width: 60%;
             height: 100%;
             border-radius: 0;
@@ -33,7 +33,7 @@
     }
 
     @media (width <= 500px) {
-        .login {
+        .register {
             width: 90%;
             height: 100%;
             border-radius: 0;
@@ -49,11 +49,11 @@
         }
     }
 
-    .login h2 {
+    .register h2 {
         text-align: left;
     }
 
-    .login input {
+    .register input {
         width: 100%;
         height: 42px;
         margin-top: 20px;
@@ -65,26 +65,26 @@
         outline: none;
     }
 
-    .login input:hover {
+    .register input:hover {
         border: 1px var(--blue) solid;
     }
 
-    .login input:focus {
+    .register input:focus {
         border: 1px var(--blue) solid;
     }
 
-    .login input::placeholder {
+    .register input::placeholder {
         color: var(--gray);
     }
 
-    .login span {
+    .register span {
         font-size: 12px;
         color: var(--gray);
         cursor: pointer;
         vertical-align: middle;
     }
 
-    .login a {
+    .register a {
         text-decoration: none;
         font-size: 12px;
         color: var(--blue);
@@ -92,7 +92,7 @@
         vertical-align: middle;
     }
 
-    .login button {
+    .register button {
         width: 100%;
         height: 42px;
         border-radius: 8px;
@@ -102,65 +102,69 @@
         transition: 0.3s;
     }
 
-    .login button:active {
+    .register button:active {
       transform: scale(95%);
     }
 
-    .login .primary {
+    .register .primary {
         margin-top: 20px;
         background: var(--blue);
         border: 1px var(--blue) solid;
         color: var(--white);
     }
 
-    .login .primary:hover {
+    .register .primary:hover {
         opacity: 0.8;
     }
 
-    .login .common {
+    .register .common {
         margin-top: 10px;
         background: none;
         border: 1px var(--gray) solid;
         color: var(--gray);
     }
 
-    .login .common:hover {
+    .register .common:hover {
         border: 1px var(--blue) solid;
         color: var(--blue);
     }
 </style>
-<div class="login">
-    <h2>嗨！<br>欢迎使用荷包记账✨</h2>
-    <form action="../login-servlet" method="post" onsubmit="return checkForm()">
-        <input id="login-form-username"
+<div class="register">
+    <h2>加入我们！<br>注册荷包记账✨</h2>
+    <form action="../register-servlet" method="post" onsubmit="return checkForm()">
+        <input id="register-form-username"
                name="username"
                type="text"
                placeholder="账号" />
-        <input id="login-form-password"
+        <input id="register-form-password"
                name="password"
                type="password"
                placeholder="密码" />
-        <button id="login-button" type="submit" class="primary">登 录</button>
-        <button type="button" class="common" onclick="goRegister()">注 册</button>
+        <input id="register-form-nick-name"
+               name="nick-name"
+               type="text"
+               placeholder="昵称" />
+        <button id="register-button" type="submit" class="primary">注 册</button>
+        <button type="button" class="common" onclick="goLogin()">返 回</button>
     </form>
 </div>
 
 <script>
-<%--  最后删掉  --%>
-    document.getElementById("login-form-username").value = "admin";
-    document.getElementById("login-form-password").value = "123456";
-    document.getElementById("login-button").click();
-<%--  最后删掉  --%>
     function checkForm() {
-        const username = $('#login-form-username').val()
-        const password = $('#login-form-password').val()
-        if (username==='') {
+        const username = $('#register-form-username').val()
+        const password = $('#register-form-password').val()
+        const nickName = $('#register-form-nick-name').val()
+        if (username === '') {
             alert("请输入账号");
             $('#register-form-username').focus()
             return false
-        } else if (password==='') {
+        } else if (password === '') {
             alert('请输入密码')
-            $('#login-form-password').focus()
+            $('#register-form-password').focus()
+            return false
+        } else if (nickName === '') {
+            alert('请输入昵称')
+            $('#register-form-nick-name').focus()
             return false
         } else {
             return true

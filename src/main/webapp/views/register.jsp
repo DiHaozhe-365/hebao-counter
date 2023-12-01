@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>登录 - 荷包记账</title>
+    <title>注册 - 荷包记账</title>
     <link rel="icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../public/css/theme.css">
@@ -13,6 +13,6 @@
     <script type="text/javascript" src="../public/js/utils.js"></script>
 </head>
 <body>
-<common:Login/>
+<common:Register/>
 </body>
 </html>
