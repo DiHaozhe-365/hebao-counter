@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4315836 */
+  src: url('iconfont.woff2?t=1699236089083') format('woff2'),
+       url('iconfont.woff?t=1699236089083') format('woff'),
+       url('iconfont.ttf?t=1699236089083') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-airplane:before {
+  content: "\e638";
+}
+
+.icon-boat:before {
+  content: "\e606";
+}
+
+.icon-railway:before {
+  content: "\e605";
+}
+
+.icon-bus:before {
+  content: "\e74e";
+}
+
+.icon-taxi:before {
+  content: "\e618";
+}
+
+.icon-filter:before {
+  content: "\e60c";
+}
+
+.icon-mark:before {
+  content: "\e660";
+}
+
+.icon-daily-necessities:before {
+  content: "\e602";
+}
+
+.icon-salary:before {
+  content: "\e603";
+}
+
+.icon-stock:before {
+  content: "\e63d";
+}
+
+.icon-water-electricity-gas:before {
+  content: "\e631";
+}
+
+.icon-traffic:before {
+  content: "\e634";
+}
+
+.icon-present:before {
+  content: "\e616";
+}
+
+.icon-clothes:before {
+  content: "\e610";
+}
+
+.icon-entertainment:before {
+  content: "\e609";
+}
+
+.icon-sport:before {
+  content: "\e61c";
+}
+
+.icon-child:before {
+  content: "\e611";
+}
+
+.icon-study:before {
+  content: "\e60f";
+}
+
+.icon-phone:before {
+  content: "\e60a";
+}
+
+.icon-travel:before {
+  content: "\e7ea";
+}
+
+.icon-alcohol-tobacco:before {
+  content: "\e7f1";
+}
+
+.icon-medical:before {
+  content: "\e7f2";
+}
+
+.icon-house:before {
+  content: "\e7f3";
+}
+
+.icon-snack:before {
+  content: "\e7f4";
+}
+
+.icon-small-red-packet:before {
+  content: "\e6e5";
+}
+
+.icon-live-cost:before {
+  content: "\e645";
+}
+
+.icon-car-oil:before {
+  content: "\e63c";
+}
+
+.icon-pet:before {
+  content: "\e604";
+}
+
+.icon-makeup:before {
+  content: "\e60e";
+}
+
+.icon-camera:before {
+  content: "\e612";
+}
+
+.icon-food:before {
+  content: "\e669";
+}
+
+.icon-extra-income:before {
+  content: "\e64b";
+}
+
+.icon-other:before {
+  content: "\e629";
+}
+
+.icon-search:before {
+  content: "\e639";
+}
+
+.icon-home:before {
+  content: "\e655";
+}
+
+.icon-wallet:before {
+  content: "\e608";
+}
+
+.icon-logout:before {
+  content: "\e676";
+}
+
+.icon-setting:before {
+  content: "\e657";
+}
+
+.icon-refresh:before {
+  content: "\e600";
+}
+
+.icon-add:before {
+  content: "\e601";
+}
+
+.icon-red-packet:before {
+  content: "\e614";
+}
+
+.icon-money-packet:before {
+  content: "\e665";
+}
+
+.icon-pig:before {
+  content: "\e6f0";
+}
+
+.icon-credit-card:before {
+  content: "\e8bf";
+}
+
+.icon-form:before {
+  content: "\e74b";
+}
+
+.icon-time-circle:before {
+  content: "\e70b";
+}
+
+.icon-budget:before {
+  content: "\ebc4";
+}
+
