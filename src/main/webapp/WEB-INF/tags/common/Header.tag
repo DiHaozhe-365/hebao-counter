@@ -9,9 +9,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255);
       border-bottom: 1px solid var(--cutline);
-      backdrop-filter: saturate(250%) blur(14px) brightness(100%);
       user-select: none;
       z-index: 1000;
     }

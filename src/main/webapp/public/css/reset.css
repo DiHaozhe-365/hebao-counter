@@ -19,7 +19,11 @@ body {
 }
 
 main {
-  display: block;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 h1 {
