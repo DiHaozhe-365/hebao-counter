@@ -200,7 +200,7 @@
             <span id="introduce">一站式钱包管理助手</span>
             <div id="buttons">
                 <button class="primary-button" onclick="goLogin()">项目演示</button>
-                <button class="common-button" onclick="goDocs()">快速上手</button>
+                <button class="common-button" onclick="goDocs()">快速开始</button>
             </div>
         </div>
     </div>
@@ -211,6 +211,6 @@
         window.open('./views/login.jsp', '_blank')
     }
     function goDocs() {
-        window.open('./views/docs.jsp', '_blank')
+        window.location.href = './views/docs.jsp'
     }
 </script>

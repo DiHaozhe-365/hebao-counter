@@ -62,6 +62,7 @@
       border-radius: 12px;
       transition: 0.3s;
       font-size: 18px;
+      display: none;
     }
     #header-menu li:hover {
       background: var(--blue);
@@ -72,26 +73,26 @@
       transform: scale(95%);
     }
     <%-- 适配手机端 --%>
-    @media (width <= 500px) {
+    @media (width <= 960px) {
       #header-menu li {
         margin-left: 3px;
         padding: 6px 8px;
         border-radius: 12px;
         transition: 0.3s;
         font-size: 16px;
+        display: block;
       }
     }
 </style>
 <header id="header">
     <div id="header-container">
         <div id="header-logo" onclick="goIndex()">
-            <img src="./public/img/logo.svg" alt="logo">
+            <img src="../public/img/logo.svg" alt="logo">
             <span>荷包记账</span>
         </div>
         <div id="header-menu">
             <ul>
-                <li onclick="goDocs()">文 档</li>
-                <li onclick="goGitHub()">代 码</li>
+                <li onclick="getMenu()">目 录</li>
             </ul>
         </div>
     </div>
@@ -99,12 +100,6 @@
 
 <script>
     function goIndex() {
-        window.location.href = './'
-    }
-    function goGitHub() {
-        window.open('https://github.com/DiHaozhe-365/hebao-counter', '_blank')
-    }
-    function goDocs() {
-        window.location.href = './views/docs.jsp'
+        window.location.href = '../'
     }
 </script>
