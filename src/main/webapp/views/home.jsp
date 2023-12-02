@@ -6,6 +6,7 @@
     <link rel="icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../public/css/theme.css">
+    <link rel="stylesheet" href="../public/icon/iconfont.css">
     <script type="text/javascript" src="../public/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="../public/js/math.js"></script>
     <script type="text/javascript" src="../public/js/utils.js"></script>

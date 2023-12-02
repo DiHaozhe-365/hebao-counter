@@ -82,6 +82,9 @@
         font-size: 16px;
         display: block;
       }
+      #header-menu li:hover .iconfont {
+        color: var(--white);
+      }
     }
 </style>
 <header id="header">
@@ -92,7 +95,7 @@
         </div>
         <div id="header-menu">
             <ul>
-                <li onclick="getMenu()">目 录</li>
+                <li onclick="getMenu()"><span class="iconfont icon-other"></span></li>
             </ul>
         </div>
     </div>
