@@ -67,7 +67,7 @@
 
     #content-container iframe {
       position: absolute;
-      top: 40px;
+      top: 60px;
       width: 105%;
       height: 100%;
       border: none;

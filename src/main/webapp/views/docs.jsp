@@ -11,6 +11,7 @@
     <script type="text/javascript" src="../public/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="../public/js/math.js"></script>
     <script type="text/javascript" src="../public/js/utils.js"></script>
+    <script type="text/javascript" src="../public/js/router.js"></script>
 </head>
 <body>
 <docs:Header/>

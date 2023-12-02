@@ -23,9 +23,7 @@
     }
     <%-- 适配手机端 --%>
     @media (width <= 663px) {
-      #sidebar {
-        width: 0;
-      }
+
     }
     @media (width <= 500px) {
 

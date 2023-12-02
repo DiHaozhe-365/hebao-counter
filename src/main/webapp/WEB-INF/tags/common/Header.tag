@@ -9,7 +9,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.8);
       border-bottom: 1px solid var(--cutline);
       backdrop-filter: saturate(250%) blur(14px) brightness(100%);
       user-select: none;
@@ -62,19 +62,24 @@
       border-radius: 12px;
       transition: 0.3s;
       font-size: 18px;
-      display: none;
     }
     #header-menu li:hover {
       background: var(--blue);
       color: var(--white);
       cursor: pointer;
     }
+    #header-menu li:hover .iconfont {
+      color: var(--white);
+    }
     #header-menu li:active {
       transform: scale(95%);
     }
+    #sidebar-button {
+      display: none;
+    }
     <%-- 适配手机端 --%>
     @media (width <= 960px) {
-      #header-menu li {
+      #sidebar-button {
         margin-left: 3px;
         padding: 6px 8px;
         border-radius: 12px;
@@ -82,27 +87,43 @@
         font-size: 16px;
         display: block;
       }
-      #header-menu li:hover .iconfont {
-        color: var(--white);
-      }
+    }
+
+    @media (width <= 500px) {
+
     }
 </style>
 <header id="header">
     <div id="header-container">
-        <div id="header-logo" onclick="goIndex()">
+        <div id="header-logo" onclick="goHome()">
             <img src="../public/img/logo.svg" alt="logo">
             <span>荷包记账</span>
         </div>
         <div id="header-menu">
             <ul>
-                <li onclick="getMenu()"><span class="iconfont icon-other"></span></li>
+                <li id="sidebar-button" onclick="getMenu()"><span class="iconfont icon-other"></span></li>
             </ul>
         </div>
     </div>
 </header>
 
 <script>
-    function goIndex() {
-        window.location.href = '../'
+    function getMenu() {
+        if ($('#sidebar').is(":hidden")) {
+            $('#sidebar').css({display: 'block'})
+        } else {
+            $('#sidebar').css({display: 'none'})
+        }
     }
+
+    $(window).resize(function(){				         //  监控窗口宽度变化
+        if( $(window).width() > 960 ) {
+            $('#sidebar').css({display: 'block'})
+        }
+    })
+    $(window).resize(function(){				         //  监控窗口宽度变化
+        if( $(window).width() <= 960 ) {
+            $('#sidebar').css({display: 'none'})
+        }
+    })
 </script>

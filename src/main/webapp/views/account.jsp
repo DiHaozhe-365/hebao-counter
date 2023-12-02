@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>主页 - 荷包记账</title>
+    <title>个人信息 - 荷包记账</title>
     <link rel="icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
     <link rel="stylesheet" type="text/css" href="../public/css/theme.css">
