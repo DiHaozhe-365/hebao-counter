@@ -4,7 +4,7 @@
     @media (width > 960px) {
       main {
         margin-left: 200px;
-        margin-right: 150px;
+        margin-right: 200px;
         display: flex;
         justify-content: center;
       }
@@ -180,7 +180,17 @@
             type: 'POST',
             data: { id: accountId },
             success: function(data) {
+                netMoney = data.assetVO.netMoney
+                totalAsset = data.assetVO.totalAsset
+                totalDebt = data.assetVO.totalDebt
+                totalBorrowIn =  data.assetVO.totalBorrowIn
+                totalBorrowOut = data.assetVO.totalBorrowOut
                 totalAssetList = data.assetVO.totalAssetList
+                $('#netMoney').text(netMoney)
+                $('#totalAsset').text(totalAsset)
+                $('#totalDebt').text(totalDebt)
+                $('#totalBorrowIn').text(totalBorrowIn)
+                $('#totalBorrowOut').text(totalBorrowOut)
                 $('#totalAssetList').text(totalAssetList)
                 let assets = data.assetVO.assets
                 // 循环遍历数据，并将每个数据插入到指定的 DOM 元素中
@@ -188,8 +198,8 @@
                     var html =
                         '<div class="asset-item">'+
                             '<img class="asset-item-img" style="width: 30px; border-radius: 50%; margin-right: 10px" alt="item" src="../public/asset/' + asset.type + '.png"/>'+
-                            '<span class="asset-item-title" style="margin-right: auto; font-weight: 500">' + asset.name + '</span>'+
-                            '<span class="asset-item-money" style="margin-left: auto; font-weight: 500">' + formatMoney(asset.money) + '</span>'+
+                            '<span class="asset-item-title" style="margin-right: auto">' + asset.name + '</span>'+
+                            '<span class="asset-item-money" style="margin-left: auto">' + formatMoney(asset.money) + '</span>'+
                         '</div>'
                 $('#asset-list').append(html); // 将每个资产项追加到指定的容器中
                 });

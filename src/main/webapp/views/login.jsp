@@ -16,3 +16,11 @@
 <common:Login/>
 </body>
 </html>
+
+<%--  最后删掉  --%>
+<script>
+    document.getElementById("login-form-username").value = "admin";
+    document.getElementById("login-form-password").value = "123456";
+    document.getElementById("login-button").click();
+</script>
+<%--  最后删掉  --%>

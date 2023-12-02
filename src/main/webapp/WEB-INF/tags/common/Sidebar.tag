@@ -14,6 +14,7 @@
       background: var(--white);
       border-right: 1px solid var(--cutline);
       user-select: none;
+      z-index: 800;
     }
     #sidebar-container {
       width: 100%;

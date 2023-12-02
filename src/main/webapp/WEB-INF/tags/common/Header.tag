@@ -100,7 +100,8 @@
         </div>
         <div id="header-menu">
             <ul>
-                <li id="sidebar-button" onclick="getMenu()"><span class="iconfont icon-other"></span></li>
+                <li id="header-add-button" style="display: none"><span class="iconfont icon-add"></span></li>
+                <li id="sidebar-button" onclick="getMenu()"><span class="iconfont icon-more" style="margin-top: 10px"></span></li>
             </ul>
         </div>
     </div>

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4315836 */
-  src: url('iconfont.woff2?t=1699236089083') format('woff2'),
-       url('iconfont.woff?t=1699236089083') format('woff'),
-       url('iconfont.ttf?t=1699236089083') format('truetype');
+  src: url('iconfont.woff2?t=1701524371431') format('woff2'),
+       url('iconfont.woff?t=1701524371431') format('woff'),
+       url('iconfont.ttf?t=1701524371431') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\ebc5";
+}
+
+.icon-more:before {
+  content: "\e73a";
 }
 
 .icon-airplane:before {
@@ -167,10 +175,6 @@
 
 .icon-refresh:before {
   content: "\e600";
-}
-
-.icon-add:before {
-  content: "\e601";
 }
 
 .icon-red-packet:before {

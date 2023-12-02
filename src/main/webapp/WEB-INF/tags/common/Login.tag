@@ -146,11 +146,6 @@
 </div>
 
 <script>
-<%--  最后删掉  --%>
-    document.getElementById("login-form-username").value = "admin";
-    document.getElementById("login-form-password").value = "123456";
-    document.getElementById("login-button").click();
-<%--  最后删掉  --%>
     function checkForm() {
         const username = $('#login-form-username').val()
         const password = $('#login-form-password').val()

@@ -18,5 +18,7 @@
 <common:Header/>
 <common:Sidebar/>
 <asset:Main/>
+<asset:AddAsset/>
+<common:Footer/>
 </body>
 </html>

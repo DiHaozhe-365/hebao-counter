@@ -95,7 +95,7 @@
         </div>
         <div id="header-menu">
             <ul>
-                <li onclick="getMenu()"><span class="iconfont icon-other"></span></li>
+                <li onclick="getMenu()"><span class="iconfont icon-more"></span></li>
             </ul>
         </div>
     </div>
