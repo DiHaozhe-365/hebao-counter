@@ -31,7 +31,7 @@ public class DeleteAssetServlet extends HttpServlet {
         // 请求删除资产接口
         AssetDaoImpl assetDao = new AssetDaoImpl();
         assetDao.deleteAsset(Integer.parseInt(id));
-        out.println("<script>alert('删除成功');window.location.href='jsp/asset.jsp';</script>");
+        out.println("<script>alert('删除成功');window.location.href='views/asset.jsp';</script>");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

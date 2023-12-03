@@ -195,11 +195,13 @@
                 let assets = data.assetVO.assets
                 // 循环遍历数据，并将每个数据插入到指定的 DOM 元素中
                 $.each(assets, function(index, asset) {
+                    let assetMoney = formatMoney(asset.money)
+                    var row = JSON.stringify(asset).replace(/\"/g,"'");//row的是一个对象
                     var html =
-                        '<div class="asset-item">'+
+                        '<div class="asset-item" onclick="getAssetDetail(' + row + ')">'+
                             '<img class="asset-item-img" style="width: 30px; border-radius: 50%; margin-right: 10px" alt="item" src="../public/asset/' + asset.type + '.png"/>'+
                             '<span class="asset-item-title" style="margin-right: auto">' + asset.name + '</span>'+
-                            '<span class="asset-item-money" style="margin-left: auto">' + formatMoney(asset.money) + '</span>'+
+                            '<span class="asset-item-money" style="margin-left: auto">' + assetMoney + '</span>'+
                         '</div>'
                 $('#asset-list').append(html); // 将每个资产项追加到指定的容器中
                 });

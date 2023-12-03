@@ -48,7 +48,7 @@ public class UpdateAssetServlet extends HttpServlet {
         // 请求修改资产接口
         AssetDaoImpl assetDao = new AssetDaoImpl();
         assetDao.updateAsset(asset);
-        out.println("<script>alert('修改成功');window.location.href='jsp/asset.jsp';</script>");
+        out.println("<script>alert('修改成功');window.location.href='views/asset.jsp';</script>");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

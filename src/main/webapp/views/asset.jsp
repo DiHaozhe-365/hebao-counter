@@ -20,6 +20,10 @@
 <common:Sidebar/>
 <asset:Main/>
 <asset:AddAsset/>
+<asset:CheckAsset/>
+<asset:CheckAssetMore/>
+<asset:CheckAssetChange/>
+<asset:CheckBill/>
 <bill:AddBill/>
 <common:Footer/>
 </body>
