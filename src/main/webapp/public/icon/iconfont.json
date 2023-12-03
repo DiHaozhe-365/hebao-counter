@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1356141",
+      "name": "返回",
+      "font_class": "back",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
       "icon_id": "38402204",
       "name": "加号",
       "font_class": "add",

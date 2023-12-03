@@ -41,12 +41,16 @@
       transform: scale(95%);
       border-radius: 12px;
     }
-    #account img{
+    #account img {
       width: 90px;
       height: 90px;
       border-radius: 50%;
       -webkit-user-drag: none;
       margin-bottom: 10px;
+    }
+
+    #account-role {
+      font-size: 12px;
     }
 
     #account .common-user {

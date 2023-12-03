@@ -2,7 +2,9 @@ package com.dihaozhe.hebaocounter.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.dihaozhe.hebaocounter.dao.impl.AssetDaoImpl;
+import com.dihaozhe.hebaocounter.dao.impl.BillDaoImpl;
 import com.dihaozhe.hebaocounter.entity.dto.Asset;
+import com.dihaozhe.hebaocounter.entity.dto.Bill;
 import com.dihaozhe.hebaocounter.entity.vo.AssetVO;
 import lombok.extern.slf4j.Slf4j;
 
@@ -37,17 +39,34 @@ public class GetAssetsServlet extends HttpServlet {
         double netMoney = 0;  // 净资产
 
         // 获取用户id信息
-        String assetId = request.getParameter("id");
+        String accountId = request.getParameter("id");
 
         // 请求资产接口
         AssetDaoImpl assetDao = new AssetDaoImpl();
-        List<Asset> assets = assetDao.readAssetsByAccountId(Integer.parseInt(assetId));
         AssetVO assetVO = new AssetVO();
-        assetVO.setAssets(assets);
+        BillDaoImpl billDao = new BillDaoImpl();
+        List<Asset> myAssets = assetDao.readAssetsByAccountId(Integer.parseInt(accountId));
+        List<Bill> bills = null;
+        for (int i = 0; i < myAssets.size(); i++) {
+            double changeMoney = 0;
+            Asset myAsset = myAssets.get(i);
+            bills = billDao.readBillsByAssetId(myAsset.getId());
+            for (int j = 0; j < bills.size(); j++) {
+                Bill bill = bills.get(j);
+                if (bill.getBillType().equals("支出")) {
+                    changeMoney = changeMoney - bill.getMoney();
+                } else if (bill.getBillType().equals("收入")) {
+                    changeMoney = changeMoney + bill.getMoney();
+                }
+            }
+            myAsset.setMoney(myAsset.getMoney() + changeMoney);
+            myAssets.set(i, myAsset);
+        }
+        assetVO.setAssets(myAssets);
 
         // 计算资产列表总额
-        for (int i = 0; i < assets.size(); i++) {
-            asset = assets.get(i);
+        for (int i = 0; i < myAssets.size(); i++) {
+            asset = myAssets.get(i);
             totalAssetList += asset.getMoney();
         }
         if (totalAssetList > 0) {
