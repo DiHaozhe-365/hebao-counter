@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib tagdir="/WEB-INF/tags/common" prefix="common" %>
+<%@ taglib tagdir="/WEB-INF/tags/common/account" prefix="account" %>
 <%@ taglib tagdir="/WEB-INF/tags/common/bill" prefix="bill" %>
 <html>
 <head>
@@ -17,6 +18,8 @@
 <body>
 <common:Header/>
 <common:Sidebar/>
+<account:Main/>
+<account:ChangeNickName/>
 <bill:AddBill/>
 <common:TabBar/>
 <common:Footer/>

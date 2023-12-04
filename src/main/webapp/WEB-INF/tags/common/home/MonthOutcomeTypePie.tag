@@ -64,7 +64,7 @@
                     },
                     series: [
                         {
-                            name: 'Access From',
+                            name: '本月支出类型分布',
                             type: 'pie',
                             radius: ['40%', '70%'],
                             avoidLabelOverlap: false,

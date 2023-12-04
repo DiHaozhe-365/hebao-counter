@@ -191,6 +191,25 @@ public class AccountDaoImpl implements AccountDao {
     }
 
     @Override
+    public void updateNickName(Account account) {
+        String id = String.valueOf(account.getId());
+        String nickName = account.getNickName();
+        sql = "UPDATE tb_account SET nick_name = '" + nickName + "' WHERE id = " + id;
+        try {
+            con = getConnection();
+            pstmt = con.prepareStatement(sql);
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+            log.error("修改昵称失败");
+            throw new RuntimeException(e);
+        } finally {
+            close(rs);
+            close(pstmt);
+            close(con);
+        }
+    }
+
+    @Override
     public void deleteAccount(int id) {
 
     }

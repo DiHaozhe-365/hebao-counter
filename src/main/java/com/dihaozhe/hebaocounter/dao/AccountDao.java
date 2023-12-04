@@ -17,6 +17,7 @@ public interface AccountDao {
 
     // Update 更新账号
     void updateAccount(Account account);
+    void updateNickName(Account account);
 
     // Delete 删除账号
     void deleteAccount(int id);
