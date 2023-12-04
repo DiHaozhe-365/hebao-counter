@@ -1,6 +1,7 @@
 package com.dihaozhe.hebaocounter.dao;
 
 import com.dihaozhe.hebaocounter.entity.dto.Bill;
+import com.dihaozhe.hebaocounter.entity.vo.OutcomeTypeVO;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ public interface BillDao {
 
     // Read 查询账单
     List<Bill> readBillsByAccountId(int accountId);
+    List<OutcomeTypeVO> readOutcomeBillsByAccountIdAndGroupByClass(int accountId);
     List<Bill> readBillsByAssetId(int assetId);
     Bill readBillById(int id);
 

@@ -15,7 +15,7 @@
       width: 100%;
     }
     .month-summary-item {
-      height: 120px;
+      height: 140px;
       width: 33%;
       border-radius: 12px;
       display: flex;
@@ -58,10 +58,18 @@
       font-size: 16px;
       font-weight: 700;
     }
+    #month-outcome-charts {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
     @media (width <= 960px) {
       main {
         margin-left: 10px;
         margin-right: 10px;
+      }
+      #month-outcome-charts {
+        flex-wrap: wrap;
       }
     }
     @media (width <= 500px) {
@@ -111,7 +119,10 @@
         </div>
     </div>
     <%--  月支出分布  --%>
-    <home:MonthOutcomeDistribution/>
+    <div id="month-outcome-charts">
+        <home:MonthOutcomeDistribution/>
+        <home:MonthOutcomeTypePie/>
+    </div>
 </main>
 
 <script>

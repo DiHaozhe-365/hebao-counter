@@ -493,7 +493,7 @@
         bottom: 0;
         left: 50%;
         right: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -5%);
       }
       #bill-content {
         display: flex;

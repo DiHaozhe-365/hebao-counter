@@ -2,6 +2,7 @@ package com.dihaozhe.hebaocounter.dao.impl;
 
 import com.dihaozhe.hebaocounter.dao.BillDao;
 import com.dihaozhe.hebaocounter.entity.dto.Bill;
+import com.dihaozhe.hebaocounter.entity.vo.OutcomeTypeVO;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.Connection;
@@ -20,6 +21,7 @@ public class BillDaoImpl implements BillDao {
     PreparedStatement pstmt;
     ResultSet rs;
     Bill bill;
+    OutcomeTypeVO outcomeTypeVO;
     List<Bill> bills;
 
     @Override
@@ -80,6 +82,35 @@ public class BillDaoImpl implements BillDao {
             close(con);
         }
         return bills;
+    }
+
+    @Override
+    public List<OutcomeTypeVO> readOutcomeBillsByAccountIdAndGroupByClass(int accountId) {
+        List<OutcomeTypeVO> outcomeTypeArray = new ArrayList<>();
+        sql = "SELECT SUM(money), bill_class FROM (" +
+                "SELECT * FROM tb_bill WHERE YEAR(time) = YEAR(CURRENT_DATE()) " +
+                "  AND MONTH(time) = MONTH(CURRENT_DATE())" +
+                ") AS subquery WHERE account_id = " + accountId + " AND status != '已删除' AND bill_type = '支出' GROUP BY bill_class";
+
+        try {
+            con = getConnection();
+            pstmt = con.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            while (rs.next()) {
+                outcomeTypeVO = new OutcomeTypeVO();
+                outcomeTypeVO.setValue(rs.getDouble(1));
+                outcomeTypeVO.setName(rs.getString(2));
+                outcomeTypeArray.add(outcomeTypeVO);
+            }
+        } catch (Exception e) {
+            log.error("查询账单表失败");
+            throw new RuntimeException(e);
+        } finally {
+            close(rs);
+            close(pstmt);
+            close(con);
+        }
+        return outcomeTypeArray;
     }
 
     @Override

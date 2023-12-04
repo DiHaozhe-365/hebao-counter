@@ -25,6 +25,7 @@
 <asset:CheckAssetChange/>
 <asset:CheckBill/>
 <bill:AddBill/>
+<common:TabBar/>
 <common:Footer/>
 </body>
 </html>

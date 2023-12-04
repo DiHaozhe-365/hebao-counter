@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib tagdir="/WEB-INF/tags/common" prefix="common" %>
+<%@ taglib tagdir="/WEB-INF/tags/common/bill" prefix="bill" %>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -16,5 +17,8 @@
 <body>
 <common:Header/>
 <common:Sidebar/>
+<bill:AddBill/>
+<common:TabBar/>
+<common:Footer/>
 </body>
 </html>

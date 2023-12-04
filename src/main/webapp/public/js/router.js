@@ -21,3 +21,23 @@ function goAccount() {
 function goAsset() {
     window.location.href = './asset.jsp'
 }
+
+function goSetting() {
+    window.location.href = './setting.jsp'
+}
+
+// 未来版本
+function goBudget() {
+    alert('作者正在玩命开发中，敬请期待！')
+    //window.location.href = './budget.jsp'
+}
+
+function goCard() {
+    alert('作者正在玩命开发中，敬请期待！')
+    //window.location.href = './card.jsp'
+}
+
+function goCircle() {
+    alert('作者正在玩命开发中，敬请期待！')
+    //window.location.href = './circle.jsp'
+}

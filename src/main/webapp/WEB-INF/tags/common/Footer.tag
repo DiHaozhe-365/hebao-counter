@@ -22,8 +22,10 @@
       color: var(--gray);
     }
     <%-- 适配手机端 --%>
-    @media (width <= 500px) {
-
+    @media (width <= 960px) {
+      #footer-container span {
+        color: var(--background);
+      }
     }
 </style>
 <footer id="footer">

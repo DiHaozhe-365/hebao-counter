@@ -1,16 +1,18 @@
 <%@ tag pageEncoding="UTF-8" language="java" %>
 <style>
   #month-outcome-distribution {
-    width: 100%;
-    height: 420px;
+    width: 66%;
+    height: 500px;
     margin-top: 10px;
     background: var(--white);
     border-radius: 12px;
+    margin-right: 10px;
     display: flex;
+    flex: 2;
     flex-direction: column;
   }
   #month-outcome-distribution-title {
-    width: 96%;
+    width: 94%;
     align-self: center;
     margin-top: 20px;
   }
@@ -20,7 +22,9 @@
   }
   @media (width <= 960px) {
     #month-outcome-distribution {
-      height: 350px;
+      height: 360px;
+      width: 100%;
+      margin-right: 0;
     }
   }
   @media (width <= 500px) {
@@ -32,7 +36,7 @@
 
 <div id="month-outcome-distribution">
     <div id="month-outcome-distribution-title">
-        <span>本月支出分布</span>
+        <span>本月每日支出分布</span>
     </div>
     <div id="month-outcome-distribution-echarts"></div>
 </div>
