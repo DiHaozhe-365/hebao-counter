@@ -2,7 +2,6 @@ package com.dihaozhe.hebaocounter.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.dihaozhe.hebaocounter.dao.impl.BillDaoImpl;
-import com.dihaozhe.hebaocounter.entity.dto.Bill;
 import com.dihaozhe.hebaocounter.entity.vo.OutcomeTypeVO;
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,9 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.time.LocalDate;
-import java.time.YearMonth;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,12 +30,6 @@ public class GetOutcomeTypeArrayServlet extends HttpServlet {
         // 获取用户id信息
         String accountId = request.getParameter("id");
 
-        // 获取当前日期
-        LocalDate currentDate = LocalDate.now();
-        // 指定日期格式
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM");
-        // 将日期格式化为字符串
-        String formattedMonth = currentDate.format(formatter);
         // 请求资产接口
         BillDaoImpl billDao = new BillDaoImpl();
         outcomeTypeArray = billDao.readOutcomeBillsByAccountIdAndGroupByClass(Integer.parseInt(accountId));

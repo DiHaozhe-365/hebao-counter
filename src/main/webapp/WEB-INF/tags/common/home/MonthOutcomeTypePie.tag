@@ -41,7 +41,7 @@
 <script>
     // 获取当前月份每天支出金额
     let userId2 = '${account.id}'
-    var outcomeTypeArray = null
+    let outcomeTypeArray = null
     if (userId !== '') {
         $.ajax({
             url: '../get-outcome-type-array-servlet',
