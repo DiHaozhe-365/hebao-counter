@@ -12,6 +12,7 @@ public interface BillDao {
     List<Bill> readBillsByAccountId(int accountId);
     List<Bill> readBillsByAssetId(int assetId);
     Bill readBillById(int id);
+
     // Update 更新账单
 //    void updateBill(Bill bill);
 

@@ -41,3 +41,18 @@ function formatMoney(number) {
     var formattedAmount = currencySymbol + parts[0] + '.' + decimal;
     return formattedAmount;
 }
+// 获取当前月份天数并转换为数组
+function getCurrentMonthDaysArray() {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1; // 注意月份的索引是从 0 开始的，所以要加 1
+    const daysInMonth = new Date(year, month, 0).getDate();
+
+    const daysArray = [];
+    for (let i = 1; i <= daysInMonth; i++) {
+        const day = i.toString().padStart(2, '0'); // 将每个数字转换为两位数，不足两位时在前面补 0
+        daysArray.push(day);
+    }
+
+    return daysArray;
+}
