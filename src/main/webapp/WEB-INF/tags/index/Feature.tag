@@ -87,7 +87,7 @@
         <div class="feature-card card-3">
             <span class="card-title">多端适配</span>
             <span class="card-description">
-                响应式布局，操作界面完美适配 PC 端和移动端，随时随地，想记就记。
+                响应式布局，操作界面成功适配 PC 端和移动端，随时随地，想记就记。
             </span>
         </div>
     </div>
